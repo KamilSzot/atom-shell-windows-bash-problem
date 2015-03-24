@@ -26,9 +26,11 @@ When attempting to develop atom-shell application using git bash (common tool), 
 
 This is visible as two console messages (if user doesn't have React DevTools extension installed):
 
-*"Download the React DevTools for a better development experience: http://fb.me/react-devtools", *
+*"Download the React DevTools for a better development experience: http://fb.me/react-devtools",*
 
 
 It can also lead to more elusive problems with react being loaded twice that can manifest themselves with counterintuitive messages like:
 
 *"TypeError: Cannot read property 'firstChild' of undefined",*
+
+Problem and workarounds were discovered while investigating this issue: https://github.com/kitematic/kitematic/issues/319
