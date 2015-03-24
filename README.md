@@ -14,7 +14,21 @@ When atom-shell application is ran using atom.exe that's inside this application
 
 # Issue goes away if:
 
-- Applicaiton is run from PowerShell or cmd.
+- Applicaiton is ran from PowerShell or cmd.
 - atom.exe is moved outside of the application folder before using it to run the application.
 - Applicaiton is run on Linux or Mac
 - In file index.html, the file app.js is loaded using `<script>require('./app')</script>` instead of `<script src="app.js"></script>`
+
+
+# Impact of the problem:
+
+When attempting to develop atom-shell application using git bash (common tool), react and react-router (common js libraries) on might encounter problem with react being loaded twice.
+
+This is visible as two console messages (if user doesn't have React DevTools extension installed):
+
+*"Download the React DevTools for a better development experience: http://fb.me/react-devtools", *
+
+
+It can also lead to more elusive problems with react being loaded twice that can manifest themselves with counterintuitive messages like:
+
+*"TypeError: Cannot read property 'firstChild' of undefined",*
